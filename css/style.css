@@ -1,1 +1,77 @@
+:root {
+    --grey:#535c68;
+    --bluegrey :#95afc0;
+    --blue:#30336b;
+    --darkblue:#130f40;
+    --greenblue:#22a6b3;
+    --green:#badc58;
+    --peanutgreen:#6ab04c;
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:linear-gradient(to right,var(--blue),var(--darkblue));
+    color: var(--grey);
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 1rem auto;
+}
+.inputbox {
+    padding: 1rem 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+#formInput {
+    display: flex;
+}
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#newplanInput {
+    flex: 1 1 0%;
+    background-color:var(--bluegrey);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    font-size: 0.75rem;
+}
+
+#newplanInput::placeholder {
+    color: var(--grey);
+    
+}
+
+#newplanSubmit {
+    color: var(--greenblue);
+    font-size: 2rem;
+    font-weight: 600;
+    background-image: linear-gradient(to right,var(--green),var(--peanutgreen));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    
+}
+#newplanSubmit:hover {
+    opacity: 0.8;
+}
+#newplanSubmit:active {
+    opacity: 0.6;
+}
