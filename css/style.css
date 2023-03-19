@@ -6,6 +6,7 @@
     --greenblue:#22a6b3;
     --green:#badc58;
     --peanutgreen:#6ab04c;
+    --pink:#eb4d4b;
 }
 
 * {
@@ -75,3 +76,58 @@ input, button {
 #newplanSubmit:active {
     opacity: 0.6;
 }
+/*** ***/
+.contentbox {
+    padding: 1rem 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+#list_header {
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--bluegrey);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+#plans {
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--bluegrey);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.btns {
+    display: flex;
+    margin:0 -0.25rem ;
+}
+.btns button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: 0.6s;
+}
+.btns button:hover {
+    opacity: 0.8;
+}
+.btns button:active {
+    opacity: 0.6;
+}
+
+.btns .editbtn {
+    background-image: linear-gradient(to right,var(--blue),var(--darkblue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btns .deletebtn {
+    color: var(--pink);
+}
+
