@@ -93,13 +93,18 @@ input, button {
     border-radius: 1rem;
 }
 
-#plans {
+.newplan {
     display: flex;
     justify-content: space-between;
     background-color:var(--bluegrey);
     padding: 0.5rem;
     border-radius: 1rem;
     margin: 1rem 0;
+}
+.planInput {
+    color: var(--grey);
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 .btns {
@@ -131,3 +136,7 @@ input, button {
     color: var(--pink);
 }
 
+.checked {
+    text-decoration: overline;
+    
+}
