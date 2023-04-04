@@ -10,10 +10,12 @@ function submitplan(event) {
     } else if (newplanInputDOM.value) {
         addplan(newplanInputDOM.value)
         newplanInputDOM.value =""
-    }   
+    }
+       
 }
 
-const planlistDOM = document.querySelector("#newplanlist")
+//const planlistDOM = document.querySelector("#newplanlist")
+const planlistDOM = document.querySelector(".contentbox")
 
 // function addplan(item) {
 //     let newplan = document.createElement("div")
@@ -27,10 +29,10 @@ const planlistDOM = document.querySelector("#newplanlist")
 //     newplan.classList.add("plans")
 //     planlistDOM.appendChild(newplan)
 // }
-const newplanlistDOM = document.querySelector("#newplanlist")
+
 function addplan(item) {
-    const newplan = document.createElement("div")
-    newplan.classList.add("newplan")
+    const newplan = document.createElement("article")
+    newplan.classList.add("newplanlist")
 
     const newplancontent =document.createElement("div")
     newplancontent.classList.add("newplancontent")
@@ -41,6 +43,8 @@ function addplan(item) {
     newplancontentInput.value = newplanInputDOM.value
     newplancontentInput.setAttribute("readonly","readonly")
     // newplancontent.innerText = newplanInputDOM.value
+    //newplancontentInput.classList.add("checked")
+    
 
     const planbtns = document.createElement("div")
     planbtns.classList.add("btns")
@@ -60,8 +64,13 @@ function addplan(item) {
     newplan.appendChild(newplancontent)
     newplan.appendChild(planbtns)
     newplancontent.appendChild(newplancontentInput)
+    
 
     planlistDOM.appendChild(newplan)
+    /****  ****/
+
+    
+    /****  ****/
 
     editbtn.addEventListener("click",editplan)
 
@@ -77,10 +86,27 @@ function addplan(item) {
         }
         
     }
+    
 
     deletebtn.addEventListener("click",deleteplan)
 
     function deleteplan() {
-        newplanlistDOM.removeChild(newplan)
+        planlistDOM.removeChild(newplan)
     }
+
+    newplancontentInput.addEventListener("click",function(item){
+        item.target.classList.toggle("checked")
+        DeleteAll()
+    })
+
+    function DeleteAll(){
+        let checkeditemlist = document.querySelectorAll(".checked")
+        console.log(checkeditemlist.length)
+    }
+    
 }
+
+
+
+
+

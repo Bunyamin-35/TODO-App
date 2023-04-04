@@ -48,10 +48,13 @@ input, button {
 #newplanInput {
     flex: 1 1 0%;
     background-color:var(--bluegrey);
-    padding: 0.5rem;
+    padding: 0.8rem;
     border-radius: 1rem;
     margin-right: 1rem;
     font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--grey);
+    
 }
 
 #newplanInput::placeholder {
@@ -77,23 +80,46 @@ input, button {
     opacity: 0.6;
 }
 /*** ***/
+.titlebox {
+    padding: 0.5rem 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
 .contentbox {
-    padding: 1rem 2rem;
+    padding: 0 2rem;
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
     
 }
 
+
 #list_header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color:var(--bluegrey);
     padding: 0.5rem;
     border-radius: 1rem;
 }
+#deleteallbtn {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 30px ;
+    cursor:pointer;    
+    padding: 0.5rem;
+    transition: 0.6s;
+    background: red;
+}
 
-.newplan {
+#deleteallbtn:hover {
+    opacity: 0.6;
+}
+
+.newplanlist {
     display: flex;
     justify-content: space-between;
     background-color:var(--bluegrey);
@@ -101,6 +127,13 @@ input, button {
     border-radius: 1rem;
     margin: 1rem 0;
 }
+
+
+.checked  {
+    text-decoration:line-through;
+         
+}
+
 .planInput {
     color: var(--grey);
     font-size: 0.8rem;
@@ -134,9 +167,4 @@ input, button {
 
 .btns .deletebtn {
     color: var(--pink);
-}
-
-.checked {
-    text-decoration: overline;
-    
 }
