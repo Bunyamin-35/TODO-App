@@ -1,5 +1,6 @@
 const newplanSubmitDOM = document.querySelector("#newplanSubmit")
 const newplanInputDOM = document.querySelector("#newplanInput")
+const listheaderDOM = document.querySelector("#list_header")
 
 newplanSubmitDOM.addEventListener("click",submitplan)
 
@@ -101,8 +102,21 @@ function addplan(item) {
 
     function DeleteAll(){
         let checkeditemlist = document.querySelectorAll(".checked")
-        console.log(checkeditemlist.length)
+        // console.log(checkeditemlist.length)
+        if(checkeditemlist.length>=2){
+            document.querySelector(".deleteallbtn").classList.remove("d-none")            
+        } else {
+            document.querySelector(".deleteallbtn").classList.add("d-none")           
+        }
     }
+    document.querySelector(".deleteallbtn").onclick = function() {
+        var itemschecked = document.querySelectorAll(".checked")
+        itemschecked.forEach(function(item){
+            item.parentElement.parentElement.remove()
+        })
+    }
+
+ 
     
 }
 

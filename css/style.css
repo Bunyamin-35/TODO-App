@@ -104,7 +104,7 @@ input, button {
     padding: 0.5rem;
     border-radius: 1rem;
 }
-#deleteallbtn {
+.deleteallbtn {
     font-size: 1rem;
     font-weight: 600;
     color: white;
@@ -113,9 +113,13 @@ input, button {
     padding: 0.5rem;
     transition: 0.6s;
     background: red;
+    
+}
+.d-none {
+    display: none;
 }
 
-#deleteallbtn:hover {
+.deleteallbtn:hover {
     opacity: 0.6;
 }
 
